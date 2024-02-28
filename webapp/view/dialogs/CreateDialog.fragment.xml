@@ -1,0 +1,25 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog title="Añadir Vacunacion">
+        <Label text="Vacuna:"/>
+        <TextArea value=""
+                  maxLength="133"
+                  width="100%"
+                  placeholder=""/>        
+        <Button text="Aceptar"
+                type="Accept"
+                press="onDialogAccept"
+                class="sapUiSmallMarginBottom">
+            <layoutData>
+                <FlexItemData growFactor="1"/>
+            </layoutData>
+        </Button>
+        <Button text="Cancelar"
+                type="Reject"
+                press="onDialogClose"
+                class="sapUiSmallMarginBottom">
+            <layoutData>
+                <FlexItemData growFactor="1"/>
+            </layoutData>
+        </Button>
+    </Dialog>
+</core:FragmentDefinition>

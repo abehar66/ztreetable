@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZETECSA_NOMINA_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="TipoEventos" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Mandt"/>
+                    <PropertyRef Name="Tipoevento"/>
+                </Key>
+                <Property Name="Mandt" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Tipoevento" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EvDescription" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EvSign" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EvValue" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EvModify" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EvNoCpl" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Measure" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="IGjahr"/>
+                    <PropertyRef Name="Seqnr"/>
+                    <PropertyRef Name="IMonat"/>
+                    <PropertyRef Name="IPernr"/>
+                </Key>
+                <Property Name="IGjahr" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Seqnr" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zdelito" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Idmedida" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IMonat" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ZmedidaRecl" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IPernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ZresultRecl" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Dtdur1" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ZtxtMed" Type="Edm.String" Nullable="false" MaxLength="80" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Dur" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Tipoevento" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Causa" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pos1" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Dtdur2" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Tmed" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pos3" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pos4" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pos2" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Event" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="code"/>
+                    <PropertyRef Name="personalNumber"/>
+                    <PropertyRef Name="date"/>
+                </Key>
+                <Property Name="code" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="personalNumber" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="date" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="description" Type="Edm.String" Nullable="false" MaxLength="132" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="value" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="sign" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="type" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="observations" Type="Edm.String" MaxLength="132" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="typeCode" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="generated" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="createdBy" Type="Edm.String" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="creationDate" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="userUpdate" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="measure" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Moddate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Modtime" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Salario" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                    <PropertyRef Name="Gjahr"/>
+                    <PropertyRef Name="Monat"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gjahr" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Monat" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gsber" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zcpago" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zdepa" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Trfgr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Betrg" Type="Edm.Decimal" Nullable="false" Precision="10" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Trt" Type="Edm.Decimal" Nullable="false" Precision="9" Scale="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HoraTrabaj" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GgLavoratiHora" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HoraDescont" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GgLavorati" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionPHoras" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionPDias" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionPImp" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionDHoras" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionDDias" Type="Edm.Decimal" Nullable="false" Precision="6" Scale="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionDImp" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionDias" Type="Edm.Decimal" Nullable="false" Precision="6" Scale="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionImp" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotFerieRes" Type="Edm.Decimal" Nullable="false" Precision="6" Scale="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotFerieResI" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SubsidiosImp100" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SubsidiosImp" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SubsidiosDias" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DiffSalFer" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DevengadoAdic" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotDevengado" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Cincoporc" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Isip" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotDeduzioni" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NetoAjustado" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ImpExtraHe" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ImpExtraDf" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ImpExtraDt" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ImpExtraHdd" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ImpNoc711" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ImpNoc117" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HoraExtraHe" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HoraExtraDf" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HoraExtraDt" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HoraExtraHdd" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HoraExtra" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ImpExtra" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HoraNoc711" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HoraNoc117" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SubsidiosEc" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SubsidiosAc" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SubsidiosMat" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SubsidiosRes" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Medidas" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Nominilla" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalarioResul" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionPDias17" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionPHoras17" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionPImp17" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Cess17" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NetoAjustado17" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TiempoAPagar" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zsalario13" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zsalario13Neto" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DiasFar" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SpromAcc" Type="Edm.Decimal" Nullable="false" Precision="6" Scale="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SpromLic" Type="Edm.Decimal" Nullable="false" Precision="6" Scale="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SpromRes" Type="Edm.Decimal" Nullable="false" Precision="6" Scale="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EstExt" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sr" Type="Edm.Decimal" Nullable="false" Precision="9" Scale="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PrFormado" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalSincpl" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalVar" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ImpCpl" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PorcInc" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Deuda" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Deduzioni" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Cess" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalarioCpl" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotFerieResISr" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EstMlc" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PorcMlc" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DeduzioniMlc" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DeudaMlc" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalarioMlc" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PlusGc" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PlusOtros" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PlusExperto" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PlusCert1" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PlusCert2" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Plus" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Waers" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+                <NavigationProperty Name="ToVariable" Relationship="ZETECSA_NOMINA_SRV.SalarioToVariable" FromRole="FromRole_SalarioToVariable" ToRole="ToRole_SalarioToVariable"/>
+                <NavigationProperty Name="ToMes13" Relationship="ZETECSA_NOMINA_SRV.SalarioToMes13" FromRole="FromRole_SalarioToMes13" ToRole="ToRole_SalarioToMes13"/>
+                <NavigationProperty Name="ToVacAdel" Relationship="ZETECSA_NOMINA_SRV.SalarioToVacAdel" FromRole="FromRole_SalarioToVacAdel" ToRole="ToRole_SalarioToVacAdel"/>
+                <NavigationProperty Name="ToEstimulacion" Relationship="ZETECSA_NOMINA_SRV.SalarioToEstimulacion" FromRole="FromRole_SalarioToEstimulacion" ToRole="ToRole_SalarioToEstimulacion"/>
+                <NavigationProperty Name="ToNominilla" Relationship="ZETECSA_NOMINA_SRV.SalarioToNominilla" FromRole="FromRole_SalarioToNominilla" ToRole="ToRole_SalarioToNominilla"/>
+                <NavigationProperty Name="ToNormal" Relationship="ZETECSA_NOMINA_SRV.SalarioToNormal" FromRole="FromRole_SalarioToNormal" ToRole="ToRole_SalarioToNormal"/>
+                <NavigationProperty Name="ToCabecera" Relationship="ZETECSA_NOMINA_SRV.SalarioToCabecera" FromRole="FromRole_SalarioToCabecera" ToRole="ToRole_SalarioToCabecera"/>
+                <NavigationProperty Name="ToResumen" Relationship="ZETECSA_NOMINA_SRV.SalarioToResumen" FromRole="FromRole_SalarioToResumen" ToRole="ToRole_SalarioToResumen"/>
+            </EntityType>
+            <EntityType Name="SalarioCIDInfo" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Uri" Type="Edm.String" Nullable="false" MaxLength="4096" sap:unicode="false" sap:label="URI" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Monat" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gjahr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Nachn" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Nach2" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Vorna" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="isBoss" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="ToDirecciones" Relationship="ZETECSA_NOMINA_SRV.SalarioCIDInfoToDirecciones" FromRole="FromRole_SalarioCIDInfoToDirecciones" ToRole="ToRole_SalarioCIDInfoToDirecciones"/>
+            </EntityType>
+            <EntityType Name="ResultHeader" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                    <PropertyRef Name="Gjahr"/>
+                    <PropertyRef Name="Monat"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Trfgr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Betrg" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gjahr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Monat" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PlusGc" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PlusOtros" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PlusExperto" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PlusCert1" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PlusCert2" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Plus" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalVar" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ResultResumen" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                    <PropertyRef Name="Monat"/>
+                    <PropertyRef Name="Gjahr"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Total" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zcpago" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Salario" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zdepa" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Estimulacion" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Trfgr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Betrg" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Monat" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gjahr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalVar" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacAdel" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotFerieRes" Type="Edm.String" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotFerieResI" Type="Edm.String" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="FromSalario" Relationship="ZETECSA_NOMINA_SRV.SalarioToResumen" FromRole="ToRole_SalarioToResumen" ToRole="FromRole_SalarioToResumen"/>
+            </EntityType>
+            <EntityType Name="ResultNormal" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Gjahr"/>
+                    <PropertyRef Name="Pernr"/>
+                    <PropertyRef Name="Monat"/>
+                </Key>
+                <Property Name="Gjahr" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DiaFerProm" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Bruto" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DiaFerSal" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Monat" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HoraExtra" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zcpago" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ImpExtra" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zdepa" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Trt" Type="Edm.Decimal" Nullable="false" Precision="9" Scale="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HoraTrabaj" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DevengadoAdic" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PagoAnticipo" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionPDias" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionPImp" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionDDias" Type="Edm.Decimal" Nullable="false" Precision="6" Scale="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionDImp" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SubsidiosImp" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotDevengado" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Cincoporc" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Isip" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotDeduzioni" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NetoAjustado" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotFerieRes" Type="Edm.Decimal" Nullable="false" Precision="6" Scale="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotFerieResI" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Nominilla" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DiffSalFer" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GgLavoratiHora" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HoraDescont" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GgLavorati" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionPHoras" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionDHoras" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionDias" Type="Edm.Decimal" Nullable="false" Precision="6" Scale="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionImp" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SubsidiosImp100" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SubsidiosDias" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Trfgr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Betrg" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Waers" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+            </EntityType>
+            <EntityType Name="ResultNominilla" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                    <PropertyRef Name="Gjahr"/>
+                    <PropertyRef Name="Monat"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Bruto" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gjahr" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Monat" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zcpago" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zdepa" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Trt" Type="Edm.Decimal" Nullable="false" Precision="9" Scale="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HoraTrabaj" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DevengadoAdic" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PagoAnticipo" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionPDias" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionPImp" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionDDias" Type="Edm.Decimal" Nullable="false" Precision="6" Scale="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionDImp" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SubsidiosImp" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotDevengado" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Cincoporc" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Isip" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotDeduzioni" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NetoAjustado" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotFerieRes" Type="Edm.Decimal" Nullable="false" Precision="6" Scale="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotFerieResI" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Nominilla" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DiffSalFer" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GgLavoratiHora" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HoraDescont" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GgLavorati" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionPHoras" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionDHoras" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionDias" Type="Edm.Decimal" Nullable="false" Precision="6" Scale="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionImp" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SubsidiosImp100" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SubsidiosDias" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Trfgr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Betrg" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Waers" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+            </EntityType>
+            <EntityType Name="ResultEstimulacion" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                    <PropertyRef Name="Gjahr"/>
+                    <PropertyRef Name="Monat"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gjahr" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Monat" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EstMlc" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PorcMlc" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DeduzioniMlc" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DeudaMlc" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalarioMlc" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ResultVacAdel" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                    <PropertyRef Name="Gjahr"/>
+                    <PropertyRef Name="Monat"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gjahr" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Monat" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionPDias17" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacacionPImp17" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Cess17" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NetoAjustado17" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="File" m:HasStream="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Gjahr"/>
+                    <PropertyRef Name="Id"/>
+                    <PropertyRef Name="Pernr"/>
+                    <PropertyRef Name="Monat"/>
+                </Key>
+                <Property Name="Gjahr" Type="Edm.String" Nullable="false" sap:unicode="false"/>
+                <Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false"/>
+                <Property Name="FileName" Type="Edm.String" MaxLength="255" m:FC_TargetPath="SyndicationTitle" m:FC_KeepInContent="false" sap:unicode="false"/>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" sap:unicode="false"/>
+                <Property Name="Monat" Type="Edm.String" Nullable="false" sap:unicode="false"/>
+                <Property Name="Sydate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date"/>
+                <Property Name="Sytime" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Field of type TIMS"/>
+                <Property Name="Value" Type="Edm.Binary" sap:unicode="false" sap:label="Binary String"/>
+                <Property Name="MIMEType" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="Character 100"/>
+            </EntityType>
+            <EntityType Name="ResultMes13" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                    <PropertyRef Name="Gjahr"/>
+                    <PropertyRef Name="Monat"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gjahr" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Monat" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zsalario13" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zsalario13Neto" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Waers" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+                <Property Name="SalEeAnual" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalEeProm" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalEeZperc" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalEeCess" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalEeIsip" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="EResumen" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                    <PropertyRef Name="Gjahr"/>
+                    <PropertyRef Name="Nrotpsalario"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Número del trabajador" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gjahr" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Año" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gsber" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="División" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zcpago" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Centro de Pago" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zdepa" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Departamento" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Nrotpsalario" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Tpsalario" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Tipo de Salario" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="V13" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="Diciembre año anterior" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="V01" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="Enero" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="V02" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="Febrero" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="V03" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="Marzo" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="V04" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="Abril" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="V05" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="Mayo" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="V06" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="Junio" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="V07" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="Julio" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="V08" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="Agosto" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="V09" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="Septiembre" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="V10" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="Octubre" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="V11" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="Noviembre" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="V12" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="Diciembre" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotDev" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="Total" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotTiempo" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unicode="false" sap:label="Total de tiempo" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Waers" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Moneda" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+            </EntityType>
+            <EntityType Name="Resumen" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="IGjahr"/>
+                    <PropertyRef Name="IPernr"/>
+                </Key>
+                <Property Name="IGjahr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IPernr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ResultVariabile" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                    <PropertyRef Name="Gjahr"/>
+                    <PropertyRef Name="Monat"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gjahr" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Monat" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gsber" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zcpago" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zdepa" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalVar" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Trt" Type="Edm.Decimal" Nullable="false" Precision="9" Scale="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalVarTrt" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalVarPorcInc" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalVarInc" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalVarDesc" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalVarImpCpl" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalVarCpl" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalarioResul" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalVarDeuda" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Trfgr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalVarDev" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalVarImpuestoSal" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalVarNetoAjustado" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SalVarIncVacacionesI" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Waers" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+            </EntityType>
+            <EntityType Name="Direcciones" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                </Key>
+                <Property Name="Stras" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Conkk" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zmunic" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Land1" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zbarrio" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Locat" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Anssa" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name2" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Or2kk" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ModeloEvaluacion" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Seqnr"/>
+                    <PropertyRef Name="Action"/>
+                    <PropertyRef Name="IGjahr"/>
+                    <PropertyRef Name="IMonat"/>
+                    <PropertyRef Name="IPernr"/>
+                </Key>
+                <Property Name="Seqnr" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Action" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IGjahr" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IMonat" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IPernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ParentID" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HierarchyLevel" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DrillState" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Otypeind" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Objidind" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Grpvl" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Tipoeval" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Idtarea" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Descripcion" Type="Edm.String" Nullable="false" MaxLength="132" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Evalplan" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Evalreal" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Porciento" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Evalcalc" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Aceptrab" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Acepjefe" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Estadomodelo" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Cpl" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CplACobrar" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Usermod" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Moddate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Modtime" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LabelTipoEvaluacion" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LabelEstado" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Modelo" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                    <PropertyRef Name="Gjahr"/>
+                    <PropertyRef Name="Monat"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Gjahr" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Monat" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Nombre" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="Estado" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="UrlImage" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LabelEstado" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CPL" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Boss" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Designate" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="ToModeloEvaluacion" Relationship="ZETECSA_NOMINA_SRV.ModeloModeloEvaluacion" FromRole="FromRole_ModeloModeloEvaluacion" ToRole="ToRole_ModeloModeloEvaluacion"/>
+            </EntityType>
+            <EntityType Name="IndicadoresEmpresariales" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Gjahr"/>
+                    <PropertyRef Name="Monat"/>
+                </Key>
+                <Property Name="Gjahr" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NombreMes" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Monat" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PorIe" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PorUa" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PorcInc" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Uname" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Udate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Vaccination" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="PPernr"/>
+                    <PropertyRef Name="Zvcfecp"/>
+                </Key>
+                <Property Name="PAction" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PPernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Subty" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Objps" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sprps" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Endda" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Begda" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Seqnr" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Aedtm" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Uname" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Histo" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Itxex" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Refex" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ordex" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Itbld" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Preas" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Flag1" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Flag2" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Flag3" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Flag4" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Rese1" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Rese2" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Grpvl" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Werks" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zvctip" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zvcfecp" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zvctxt" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Persk" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Orgeh" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Plans" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Stell" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Message" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Rc" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <Association Name="SalarioToCabecera" sap:content-version="1">
+                <End Type="ZETECSA_NOMINA_SRV.Salario" Multiplicity="1" Role="FromRole_SalarioToCabecera"/>
+                <End Type="ZETECSA_NOMINA_SRV.ResultHeader" Multiplicity="1" Role="ToRole_SalarioToCabecera"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SalarioToCabecera">
+                        <PropertyRef Name="Monat"/>
+                        <PropertyRef Name="Gjahr"/>
+                        <PropertyRef Name="Pernr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_SalarioToCabecera">
+                        <PropertyRef Name="Monat"/>
+                        <PropertyRef Name="Gjahr"/>
+                        <PropertyRef Name="Pernr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="SalarioToNormal" sap:content-version="1">
+                <End Type="ZETECSA_NOMINA_SRV.Salario" Multiplicity="1" Role="FromRole_SalarioToNormal"/>
+                <End Type="ZETECSA_NOMINA_SRV.ResultNormal" Multiplicity="1" Role="ToRole_SalarioToNormal"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SalarioToNormal">
+                        <PropertyRef Name="Pernr"/>
+                        <PropertyRef Name="Gjahr"/>
+                        <PropertyRef Name="Monat"/>
+                    </Principal>
+                    <Dependent Role="ToRole_SalarioToNormal">
+                        <PropertyRef Name="Pernr"/>
+                        <PropertyRef Name="Gjahr"/>
+                        <PropertyRef Name="Monat"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="SalarioToNominilla" sap:content-version="1">
+                <End Type="ZETECSA_NOMINA_SRV.Salario" Multiplicity="1" Role="FromRole_SalarioToNominilla"/>
+                <End Type="ZETECSA_NOMINA_SRV.ResultNominilla" Multiplicity="1" Role="ToRole_SalarioToNominilla"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SalarioToNominilla">
+                        <PropertyRef Name="Pernr"/>
+                        <PropertyRef Name="Gjahr"/>
+                        <PropertyRef Name="Monat"/>
+                    </Principal>
+                    <Dependent Role="ToRole_SalarioToNominilla">
+                        <PropertyRef Name="Pernr"/>
+                        <PropertyRef Name="Gjahr"/>
+                        <PropertyRef Name="Monat"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="SalarioToEstimulacion" sap:content-version="1">
+                <End Type="ZETECSA_NOMINA_SRV.Salario" Multiplicity="1" Role="FromRole_SalarioToEstimulacion"/>
+                <End Type="ZETECSA_NOMINA_SRV.ResultEstimulacion" Multiplicity="1" Role="ToRole_SalarioToEstimulacion"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SalarioToEstimulacion">
+                        <PropertyRef Name="Monat"/>
+                        <PropertyRef Name="Gjahr"/>
+                        <PropertyRef Name="Pernr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_SalarioToEstimulacion">
+                        <PropertyRef Name="Monat"/>
+                        <PropertyRef Name="Gjahr"/>
+                        <PropertyRef Name="Pernr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="SalarioToVacAdel" sap:content-version="1">
+                <End Type="ZETECSA_NOMINA_SRV.Salario" Multiplicity="1" Role="FromRole_SalarioToVacAdel"/>
+                <End Type="ZETECSA_NOMINA_SRV.ResultVacAdel" Multiplicity="1" Role="ToRole_SalarioToVacAdel"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SalarioToVacAdel">
+                        <PropertyRef Name="Monat"/>
+                        <PropertyRef Name="Gjahr"/>
+                        <PropertyRef Name="Pernr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_SalarioToVacAdel">
+                        <PropertyRef Name="Monat"/>
+                        <PropertyRef Name="Gjahr"/>
+                        <PropertyRef Name="Pernr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="SalarioToMes13" sap:content-version="1">
+                <End Type="ZETECSA_NOMINA_SRV.Salario" Multiplicity="1" Role="FromRole_SalarioToMes13"/>
+                <End Type="ZETECSA_NOMINA_SRV.ResultMes13" Multiplicity="1" Role="ToRole_SalarioToMes13"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SalarioToMes13">
+                        <PropertyRef Name="Monat"/>
+                        <PropertyRef Name="Gjahr"/>
+                        <PropertyRef Name="Pernr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_SalarioToMes13">
+                        <PropertyRef Name="Monat"/>
+                        <PropertyRef Name="Gjahr"/>
+                        <PropertyRef Name="Pernr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="SalarioToVariable" sap:content-version="1">
+                <End Type="ZETECSA_NOMINA_SRV.Salario" Multiplicity="1" Role="FromRole_SalarioToVariable"/>
+                <End Type="ZETECSA_NOMINA_SRV.ResultVariabile" Multiplicity="1" Role="ToRole_SalarioToVariable"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SalarioToVariable">
+                        <PropertyRef Name="Pernr"/>
+                        <PropertyRef Name="Gjahr"/>
+                        <PropertyRef Name="Monat"/>
+                    </Principal>
+                    <Dependent Role="ToRole_SalarioToVariable">
+                        <PropertyRef Name="Pernr"/>
+                        <PropertyRef Name="Gjahr"/>
+                        <PropertyRef Name="Monat"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="SalarioToResumen" sap:content-version="1">
+                <End Type="ZETECSA_NOMINA_SRV.Salario" Multiplicity="1" Role="FromRole_SalarioToResumen"/>
+                <End Type="ZETECSA_NOMINA_SRV.ResultResumen" Multiplicity="1" Role="ToRole_SalarioToResumen"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SalarioToResumen">
+                        <PropertyRef Name="Monat"/>
+                        <PropertyRef Name="Gjahr"/>
+                        <PropertyRef Name="Pernr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_SalarioToResumen">
+                        <PropertyRef Name="Monat"/>
+                        <PropertyRef Name="Gjahr"/>
+                        <PropertyRef Name="Pernr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="SalarioCIDInfoToDirecciones" sap:content-version="1">
+                <End Type="ZETECSA_NOMINA_SRV.SalarioCIDInfo" Multiplicity="1" Role="FromRole_SalarioCIDInfoToDirecciones"/>
+                <End Type="ZETECSA_NOMINA_SRV.Direcciones" Multiplicity="*" Role="ToRole_SalarioCIDInfoToDirecciones"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SalarioCIDInfoToDirecciones">
+                        <PropertyRef Name="Pernr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_SalarioCIDInfoToDirecciones">
+                        <PropertyRef Name="Pernr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ModeloModeloEvaluacion" sap:content-version="1">
+                <End Type="ZETECSA_NOMINA_SRV.Modelo" Multiplicity="1" Role="FromRole_ModeloModeloEvaluacion"/>
+                <End Type="ZETECSA_NOMINA_SRV.ModeloEvaluacion" Multiplicity="*" Role="ToRole_ModeloModeloEvaluacion"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ModeloModeloEvaluacion">
+                        <PropertyRef Name="Monat"/>
+                        <PropertyRef Name="Gjahr"/>
+                        <PropertyRef Name="Pernr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_ModeloModeloEvaluacion">
+                        <PropertyRef Name="IMonat"/>
+                        <PropertyRef Name="IGjahr"/>
+                        <PropertyRef Name="IPernr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZETECSA_NOMINA_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="TipoEventosSet" EntityType="ZETECSA_NOMINA_SRV.TipoEventos" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="MeasureSet" EntityType="ZETECSA_NOMINA_SRV.Measure" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="EventSet" EntityType="ZETECSA_NOMINA_SRV.Event" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="SalarioSet" EntityType="ZETECSA_NOMINA_SRV.Salario" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SalarioCIDInfoSet" EntityType="ZETECSA_NOMINA_SRV.SalarioCIDInfo" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ResultHeaderSet" EntityType="ZETECSA_NOMINA_SRV.ResultHeader" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ResultResumentSet" EntityType="ZETECSA_NOMINA_SRV.ResultResumen" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ResultNormalSet" EntityType="ZETECSA_NOMINA_SRV.ResultNormal" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ResultNominillaSet" EntityType="ZETECSA_NOMINA_SRV.ResultNominilla" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ResultEstimulacionSet" EntityType="ZETECSA_NOMINA_SRV.ResultEstimulacion" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ResultVacAdelSet" EntityType="ZETECSA_NOMINA_SRV.ResultVacAdel" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="FileSet" EntityType="ZETECSA_NOMINA_SRV.File" sap:content-version="1"/>
+                <EntitySet Name="ResultMes13Set" EntityType="ZETECSA_NOMINA_SRV.ResultMes13" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="EResumenSet" EntityType="ZETECSA_NOMINA_SRV.EResumen" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ResumenSet" EntityType="ZETECSA_NOMINA_SRV.Resumen" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ResultVariabileSet" EntityType="ZETECSA_NOMINA_SRV.ResultVariabile" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="DireccionesSet" EntityType="ZETECSA_NOMINA_SRV.Direcciones" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ModeloEvaluacionSet" EntityType="ZETECSA_NOMINA_SRV.ModeloEvaluacion" sap:creatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ModeloSet" EntityType="ZETECSA_NOMINA_SRV.Modelo" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="IndicadoresEmpresarialesSet" EntityType="ZETECSA_NOMINA_SRV.IndicadoresEmpresariales" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="VaccinationSet" EntityType="ZETECSA_NOMINA_SRV.Vaccination" sap:pageable="false" sap:content-version="1"/>
+                <AssociationSet Name="ToMes13Set" Association="ZETECSA_NOMINA_SRV.SalarioToMes13" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SalarioSet" Role="FromRole_SalarioToMes13"/>
+                    <End EntitySet="ResultMes13Set" Role="ToRole_SalarioToMes13"/>
+                </AssociationSet>
+                <AssociationSet Name="SalarioToEstimulacionSet" Association="ZETECSA_NOMINA_SRV.SalarioToEstimulacion" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SalarioSet" Role="FromRole_SalarioToEstimulacion"/>
+                    <End EntitySet="ResultEstimulacionSet" Role="ToRole_SalarioToEstimulacion"/>
+                </AssociationSet>
+                <AssociationSet Name="SalarioToVacAdelSet" Association="ZETECSA_NOMINA_SRV.SalarioToVacAdel" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SalarioSet" Role="FromRole_SalarioToVacAdel"/>
+                    <End EntitySet="ResultVacAdelSet" Role="ToRole_SalarioToVacAdel"/>
+                </AssociationSet>
+                <AssociationSet Name="SalarioToVariableSet" Association="ZETECSA_NOMINA_SRV.SalarioToVariable" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SalarioSet" Role="FromRole_SalarioToVariable"/>
+                    <End EntitySet="ResultVariabileSet" Role="ToRole_SalarioToVariable"/>
+                </AssociationSet>
+                <AssociationSet Name="SalarioToCabeceraSet" Association="ZETECSA_NOMINA_SRV.SalarioToCabecera" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SalarioSet" Role="FromRole_SalarioToCabecera"/>
+                    <End EntitySet="ResultHeaderSet" Role="ToRole_SalarioToCabecera"/>
+                </AssociationSet>
+                <AssociationSet Name="SalarioCIDInfoToDireccionesSet" Association="ZETECSA_NOMINA_SRV.SalarioCIDInfoToDirecciones" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SalarioCIDInfoSet" Role="FromRole_SalarioCIDInfoToDirecciones"/>
+                    <End EntitySet="DireccionesSet" Role="ToRole_SalarioCIDInfoToDirecciones"/>
+                </AssociationSet>
+                <AssociationSet Name="SalarioToNormalSet" Association="ZETECSA_NOMINA_SRV.SalarioToNormal" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SalarioSet" Role="FromRole_SalarioToNormal"/>
+                    <End EntitySet="ResultNormalSet" Role="ToRole_SalarioToNormal"/>
+                </AssociationSet>
+                <AssociationSet Name="SalarioToResumenSet" Association="ZETECSA_NOMINA_SRV.SalarioToResumen" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SalarioSet" Role="FromRole_SalarioToResumen"/>
+                    <End EntitySet="ResultResumentSet" Role="ToRole_SalarioToResumen"/>
+                </AssociationSet>
+                <AssociationSet Name="SalarioToNominillaSet" Association="ZETECSA_NOMINA_SRV.SalarioToNominilla" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SalarioSet" Role="FromRole_SalarioToNominilla"/>
+                    <End EntitySet="ResultNominillaSet" Role="ToRole_SalarioToNominilla"/>
+                </AssociationSet>
+                <AssociationSet Name="ModeloModeloEvaluacionSet" Association="ZETECSA_NOMINA_SRV.ModeloModeloEvaluacion" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ModeloSet" Role="FromRole_ModeloModeloEvaluacion"/>
+                    <End EntitySet="ModeloEvaluacionSet" Role="ToRole_ModeloModeloEvaluacion"/>
+                </AssociationSet>
+                <FunctionImport Name="Aceptar" ReturnType="ZETECSA_NOMINA_SRV.ModeloEvaluacion" EntitySet="ModeloEvaluacionSet" m:HttpMethod="GET" sap:action-for="ZETECSA_NOMINA_SRV.ModeloEvaluacion">
+                    <Parameter Name="Gjahr" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Monat" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Pernr" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="isBoss" Type="Edm.Boolean" Mode="In"/>
+                    <Parameter Name="Seqnr" Type="Edm.String" Mode="In"/>
+                </FunctionImport>
+                <FunctionImport Name="EvaluateMetrica" ReturnType="ZETECSA_NOMINA_SRV.ModeloEvaluacion" EntitySet="ModeloEvaluacionSet" m:HttpMethod="GET" sap:action-for="ZETECSA_NOMINA_SRV.ModeloEvaluacion">
+                    <Parameter Name="Pernr" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Monat" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Gjahr" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Valor" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Seqnr" Type="Edm.String" Mode="In"/>
+                </FunctionImport>
+                <FunctionImport Name="CargarIndicadores" ReturnType="ZETECSA_NOMINA_SRV.ModeloEvaluacion" EntitySet="ModeloEvaluacionSet" m:HttpMethod="GET" sap:action-for="ZETECSA_NOMINA_SRV.ModeloEvaluacion">
+                    <Parameter Name="Gjahr" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Pernr" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Monat" Type="Edm.String" Mode="In"/>
+                </FunctionImport>
+                <FunctionImport Name="LoadPreviousMonth" ReturnType="ZETECSA_NOMINA_SRV.ModeloEvaluacion" EntitySet="ModeloEvaluacionSet" m:HttpMethod="GET" sap:action-for="ZETECSA_NOMINA_SRV.ModeloEvaluacion">
+                    <Parameter Name="Gjahr" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Pernr" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Monat" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Type" Type="Edm.String" Mode="In"/>
+                </FunctionImport>
+                <FunctionImport Name="InitializeMonth" ReturnType="ZETECSA_NOMINA_SRV.ModeloEvaluacion" EntitySet="ModeloEvaluacionSet" m:HttpMethod="GET" sap:action-for="ZETECSA_NOMINA_SRV.ModeloEvaluacion">
+                    <Parameter Name="Gjahr" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Pernr" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Monat" Type="Edm.String" Mode="In"/>
+                </FunctionImport>
+                <FunctionImport Name="Evaluate" ReturnType="ZETECSA_NOMINA_SRV.ModeloEvaluacion" EntitySet="ModeloEvaluacionSet" m:HttpMethod="GET" sap:action-for="ZETECSA_NOMINA_SRV.ModeloEvaluacion">
+                    <Parameter Name="Gjahr" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Monat" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Pernr" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Simulate" Type="Edm.Boolean" Mode="In"/>
+                </FunctionImport>
+                <FunctionImport Name="Confirmar" ReturnType="ZETECSA_NOMINA_SRV.ModeloEvaluacion" EntitySet="ModeloEvaluacionSet" m:HttpMethod="GET" sap:action-for="ZETECSA_NOMINA_SRV.ModeloEvaluacion">
+                    <Parameter Name="Monat" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Pernr" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Gjahr" Type="Edm.String" Mode="In"/>
+                </FunctionImport>
+            </EntityContainer>
+            <atom:link rel="self" href="http://sapfioriprod.etecsa.cu:8000/sap/opu/odata/sap/ZETECSA_NOMINA_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://sapfioriprod.etecsa.cu:8000/sap/opu/odata/sap/ZETECSA_NOMINA_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,68 @@
+<core:FragmentDefinition xmlns="sap.m" 
+                         xmlns:core="sap.ui.core"
+                         xmlns:l="sap.ui.layout"
+                         xmlns:f="sap.ui.layout.form"
+                         xmlns:u="sap.ui.unified">
+    <Dialog title="{i18n>addFormTitle}">
+     <l:Grid defaultSpan="L12 M12 S12" width="auto" id="idGrid">
+        <l:content>
+        <f:SimpleForm id="SimpleFormDisplay354"
+                      minWidth="2048"
+                      maxContainerCols="2"
+                      editable="false"
+                      layout="ResponsiveGridLayout"
+                      labelSpanL="3"
+                      labelSpanM="3"
+                      emptySpanL="4"
+                      emptySpanM="4"
+                      columnsL="2"
+                      columnsM="2">
+        <VBox>
+        
+         <Label class="sapUiTinyMarginEnd" 
+                text="{i18n>worklistLabelVaccineType}" />           
+        <ComboBox
+         selectedKey="{ModeloAddVacunacion>/selVacuna}"   
+         selectionChange="" 
+         forceSelection="false"
+            items="{
+	                path: 'ModeloAddVacunacion>/listaVacunas'	                                    
+	               }">
+                 <core:Item key="{ModeloAddVacunacion>Key}" 
+                            text="{ModeloAddVacunacion>Value}" />
+         </ComboBox>           
+
+         <Label class="sapUiTinyMarginEnd" 
+                text="{i18n>tableFechaVacunacionTitle}:" />   
+         <DatePicker value="{path:'ModeloAddVacunacion>/Fecha',
+                             type:'sap.ui.model.type.Date',
+                             formatOptions: {
+                             pattern: 'dd/MM/yyyy',
+                                       strictParsing: true,
+                                        UTC:true
+                                    }}"
+                      class="sapUiSmallMarginBottom"/>
+        <FlexBox>              
+        <Button text="{i18n>acceptText}"
+                type="Accept"
+                press="onDialogAccept"
+                class="sapUiSmallMarginBottom">
+            <layoutData>
+                <FlexItemData growFactor="1"/>
+            </layoutData>
+        </Button>
+        <Button text="{i18n>cancelText}"
+                type="Reject"
+                press="onDialogClose"
+                class="sapUiSmallMarginBottom">
+            <layoutData>
+                <FlexItemData growFactor="1"/>
+            </layoutData>
+        </Button>
+         </FlexBox>
+       </VBox>
+       </f:SimpleForm>
+      </l:content>
+     </l:Grid>
+    </Dialog>
+</core:FragmentDefinition>
