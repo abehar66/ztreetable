@@ -4,7 +4,8 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:semantic="sap.f.semantic"
     xmlns="sap.m"
-    xmlns:f="sap.f" >
+    xmlns:f="sap.f"
+    xmlns:t="sap.ui.table" >
 
     <semantic:SemanticPage
         id="page"
@@ -12,7 +13,7 @@
         toggleHeaderOnTitleClick="false">
 
         <semantic:titleHeading>
-            <Title
+            <Title id="Title"
                 text="{i18n>worklistTitle}"
                 level="H2"/>
         </semantic:titleHeading>
@@ -20,19 +21,18 @@
         <semantic:titleMainAction>
             <semantic:TitleMainAction text="Mostrar" 
                                       press="onMostrar"
-                                      visible="false"/>
+                                      visible="true" id="Mostrar" />
         </semantic:titleMainAction>     
 
         <semantic:titleCustomTextActions>
             <Button text="Añadir" icon="sap-icon://create"
                     press="onCrear"
-                    visible="{ModeloVacunacion>/actualizar}"/>            
+                    visible="{ModeloVacunacion>/actualizar}" id="Add"/>            
         </semantic:titleCustomTextActions>    
 
-
         <semantic:headerContent>             
-            <HBox justifyContent="Center">                                           
-            <VBox >                                    
+            <HBox justifyContent="Center" id="HBox1">                                           
+            <VBox id="VBox1">                                    
               <f:Avatar
 				src="{/LightBox}"
                 backgroundColor="TileIcon"
@@ -43,134 +43,45 @@
               </f:Avatar>    
             </VBox>      
             </HBox>               
-            <HBox justifyContent="Center">
-            <VBox >                                    
+            <HBox justifyContent="Center" id="HBox2">
+            <VBox id="VBox2">                                    
             <Title text="Nombre" id="labelNombre" level="h3"  />            
             </VBox> 
             </HBox>
-            <HBox justifyContent="Center">
-            <VBox >            
+            <HBox justifyContent="Center" id="HBox3"> 
+            <VBox id="VBox3">             
             <Title text="" id="cid1" level="h4"></Title>  		    
             </VBox> 
             </HBox>                                                
         </semantic:headerContent>
 
-        <semantic:content>         
-            <Table
-                id="table"
-                width="auto"
-                items="{
-                    path: 'ModeloVacunacion>/lista',
-                    sorter: {
-                        path: 'Pernr',
-                        descending: false
-                    }
-                }"
-                noDataText="{worklistView>/tableNoDataText}"
-                busyIndicatorDelay="{worklistView>/tableBusyDelay}"
-                growing="true"
-                growingScrollToLoad="true"
-                updateFinished=".onUpdateFinished">
-
-                <headerToolbar>
-                    <OverflowToolbar>
-                             
-                        <Title
-                            id="tableHeader"
-                            text="{worklistView>/worklistTableTitle}"
-                            level="H3"/>
-                        <ToolbarSpacer />                       
-
-                        <Label class="sapUiTinyMarginEnd" 
-                               text="{ModeloFiltro>/Test}" />
-
-                        <Label class="sapUiTinyMarginEnd" 
-                               text="{i18n>worklistLabelVaccineType}" />
-
-                        <ComboBox
-                                selectedKey="{ModeloVacunas>/selVacuna}"  
-                                selectionChange=".onSelectVaccine" 
-                                forceSelection="false"
-                                items="{
-	                                    path: 'ModeloVacunas>/listaVacunas'	                                    
-	                                   }">
-                                <core:Item key="{ModeloVacunas>Key}" 
-                                           text="{ModeloVacunas>Value}" />
-                        </ComboBox>
-                        
-                        <Label class="sapUiTinyMarginEnd" 
-                               text="{i18n>worklistLabelSearchPernr}" />
-                        <SearchField
-                            id="searchFieldPernr"
-                            tooltip="{i18n>worklistSearchPernrTooltip}"
-                            value="{ModeloFiltro>/Pernr}"
-                            search=".onSearch">
-                            <layoutData>
-                                <OverflowToolbarLayoutData
-                                    maxWidth="200px"
-                                    priority="NeverOverflow"/>
-                            </layoutData>
-                        </SearchField>            
-
-                        <Label class="sapUiTinyMarginEnd" 
-                               text="{i18n>worklistLabelSearchName}" />
-                        <SearchField
-                            id="searchFieldName"
-                            tooltip="{i18n>worklistSearchNameTooltip}"
-                            value="{ModeloFiltro>/Name}"
-                            search=".onSearchName">
-                            <layoutData>
-                                <OverflowToolbarLayoutData
-                                    maxWidth="200px"
-                                    priority="NeverOverflow"/>
-                            </layoutData>
-                        </SearchField>            
-                        
-                    </OverflowToolbar>
-                </headerToolbar>
-
-                <columns>
-                    <Column >
-                        <Text text="{i18n>tablePernrTitle}" />
-                    </Column>                    
-                    <Column >
-                        <Text text="{i18n>tableFechaVacunacionTitle}" />
-                    </Column>
-                    <Column >
-                        <Text text="{i18n>tableNombreTitle}" />
-                    </Column>                                        
-                    <Column >
-                        <Text text="{i18n>tableVacunaTitle}" />
-                    </Column>                    
-                </columns>
-
-                <items >
-                    <ColumnListItem
-                        type="Navigation"
-                        press=".onPress">
-                        <cells>
-                         <ObjectIdentifier
-									title="{ModeloVacunacion>Pernr}"/>                                 
-                                
-                         <ObjectIdentifier
-									title="{ path: 'ModeloVacunacion>Begda',
-                                             type: 'sap.ui.model.type.Date',
-                                             formatOptions: { style: 'medium',
-                                                              UTC:true
-                                                             }
-                                            }" />                      
-                         <Text text = "{ModeloVacunacion>Nombre}"/>                                                                                                                         
-                         <Text text = "{ModeloVacunacion>VacunaTxt}"/>                            
-                         </cells>                                                  
-                    </ColumnListItem>
-                </items>
-            </Table>
-        </semantic:content>
-
-        <semantic:sendEmailAction>
-            <semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
-        </semantic:sendEmailAction>
-
+        <semantic:content>  
+             <t:TreeTable
+                    id="TreeTableBasic"
+                    rows="{path: 'ModeloCatalogo>/catalog/clothing', parameters: {arrayNames:['categories']}}"
+                    selectionMode="None"
+                    enableSelectAll="false"
+                    ariaLabelledBy="title"
+                    columnHeaderVisible="false"                                        
+                    showNoData="false"
+                    threshold="0"
+                    visibleRowCount="{ModeloCatalogo>/visibleRowCount}"                    
+                    toggleOpenState="onExpandNode">                
+                <t:columns>
+                    <t:Column id="C1">                        
+                        <t:template>
+                        <FlexBox alignItems="Center"
+                             justifyContent="Center" id="F1">                                                         
+                            <f:Avatar src="{/LightBox}"
+                                  displaySize="S"
+                                  backgroundColor=""
+                                  class="sapUiSmallMarginEnd" id="A1" />
+                              <Text text="{ModeloCatalogo>name}" wrapping="false" id="T1" />  
+                        </FlexBox>     
+                        </t:template>
+                    </t:Column>                    
+                </t:columns>
+            </t:TreeTable>
+        </semantic:content>        
     </semantic:SemanticPage>
-
 </mvc:View>
